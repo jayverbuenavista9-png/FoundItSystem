@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBC2E015-760B-4CAE-AEE8-5CC9E13C01DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FoundItSystem</RootNamespace>
+    <AssemblyName>FoundItSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EWalletPanels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EWalletPanels.Designer.cs">
+      <DependentUpon>EWalletPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoundItemsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FoundItemsPanel.Designer.cs">
+      <DependentUpon>FoundItemsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePanel.Designer.cs">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogoPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LostItemsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LostItemsPanel.Designer.cs">
+      <DependentUpon>LostItemsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationsForm.Designer.cs">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="GraphicsExtensions.cs" />
+    <Compile Include="ProfilePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfilePanel.Designer.cs">
+      <DependentUpon>ProfilePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportFoundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFoundForm.Designer.cs">
+      <DependentUpon>ReportFoundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportLostForm.Designer.cs">
+      <DependentUpon>ReportLostForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EWalletPanels.resx">
+      <DependentUpon>EWalletPanels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoundItemsPanel.resx">
+      <DependentUpon>FoundItemsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePanel.resx">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LostItemsPanel.resx">
+      <DependentUpon>LostItemsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationsForm.resx">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilePanel.resx">
+      <DependentUpon>ProfilePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFoundForm.resx">
+      <DependentUpon>ReportFoundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportLostForm.resx">
+      <DependentUpon>ReportLostForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
